@@ -2,12 +2,11 @@
 
 You need to have [Node 16.8](https://nodejs.org) or later, and in a console run:
 
-
 ```bash
 npx create-next-app@latest --example https://github.com/classiuz/nextjs-template
 ```
 
-# Template features
+## Template features
 
 Initial features that come included in the template
 
