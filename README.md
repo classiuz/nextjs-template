@@ -18,4 +18,4 @@ Initial features that come included in the template
 
 Credits to [Material Theme Builder](https://m3.material.io/theme-builde) who provided the colors to use in the template.
 
-**ClaSSius** - Template v0.0.5
+**ClaSSius** - Template v0.0.8
