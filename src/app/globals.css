@@ -15,12 +15,7 @@
 
 @layer base {
   body {
-    @apply bg-light-bg dark:bg-dark-bg;
-    @apply text-light-on_bg dark:text-dark-on_bg;
-  }
-
-  a {
-    @apply text-light-sec dark:text-dark-sec;
-    @apply hover:text-light-pri dark:hover:text-dark-pri;
+    @apply bg-[#fcfcff] dark:bg-[#191c1e];
+    @apply text-[#191c1e] dark:text-[#e2e2e5];
   }
 }

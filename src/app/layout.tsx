@@ -1,7 +1,6 @@
 import './globals.css'
-import Header from '@/components/Header'
+import Providers from '@/utils/Providers'
 import Footer from '@/components/Footer'
-import { Providers } from '@/components/Providers'
 import { Tajawal } from 'next/font/google'
 
 const tajawal = Tajawal({
@@ -18,10 +17,16 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${tajawal.variable}`}>
+    <html lang="en" className={`${tajawal.variable}`} suppressHydrationWarning>
       <body className="flex h-screen flex-col">
         <Providers>
-          <Header />
+          <div className="absolute z-30">
+            <div className="justify-center-end fixed flex w-screen">
+              <span className="absolute right-36 -top-36 blur-[100px] z-10 h-72 w-72 bg-purple-400/90 dark:bg-purple-500/60" />
+              <span className="absolute right-56 -top-56 blur-[100px] z-20 h-72 w-72 bg-red-400/90 dark:bg-red-500/60" />
+              <span className="absolute right-72 -top-72 blur-[100px] z-30 h-72 w-72 bg-orange-400/90 dark:bg-orange-500/60" />
+            </div>
+          </div>
           {children}
           <Footer />
         </Providers>
