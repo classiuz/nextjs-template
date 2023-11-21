@@ -9,13 +9,53 @@
   scroll-behavior: smooth;
 }
 
-* {
-  outline: none;
+.marquee {
+  mask-image: linear-gradient(to right, transparent, white 50%, transparent),
+              linear-gradient(to left, transparent, white 50%, transparent);
 }
 
 @layer base {
+  :root {
+    --background: 248 249 250;
+    --on-background: 0 0 0;
+    --surface: 243 245 247;
+    --on-surface: 10 10 10;
+    --surface-varient: 231 235 239;
+    --outline: 204 204 204;
+
+    --primary: 103 80 164;
+    --on-primary: 255 255 255;
+    --error: 187 22 24;
+    --on-error: 255 255 255;
+    --warning: 247 230 40;
+    --on-warning: 31 28 0;
+    --done: 33 108 46;
+    --on-done: 255 255 255;
+    --info: 0 99 153;
+    --on-info: 255 255 255;
+  }
+
+  :root[class~='dark'] {
+    --background: 9 10 11;
+    --on-background: 255 255 255;
+    --surface: 18 20 22;
+    --on-surface: 245 245 245;
+    --surface-varient: 28 31 34;
+    --outline: 51 51 51;
+
+    --primary: 208 188 255;
+    --on-primary: 56 30 114;
+    --error: 255 180 171;
+    --on-error: 105 0 5;
+    --warning: 217 201 0;
+    --on-warning: 54 49 0;
+    --done: 140 216 141;
+    --on-done: 0 57 15;
+    --info: 149 204 255;
+    --on-info: 0 51 82;
+  }
+
   body {
-    @apply bg-[#fcfcff] dark:bg-[#191c1e];
-    @apply text-[#191c1e] dark:text-[#e2e2e5];
+    @apply bg-background text-on-background;
   }
 }
